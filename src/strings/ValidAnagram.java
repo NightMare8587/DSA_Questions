@@ -1,15 +1,21 @@
 package strings;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class ValidAnagram {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        // we can either use BufferedReader or we can use Scanner
+        // BufferedReader is faster than scanner so in competitive programming we can use BufferedReader
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input first string: ");
-        String str1 = scanner.nextLine();
+        String str1 = reader.readLine();
         System.out.print("Input second string: ");
-        String str2 = scanner.nextLine();
+        String str2 = reader.readLine();
 
         boolean isValidAnagram = isValidAnagramCheck(str1.trim(),str2.trim());
         System.out.println("is String Anagram: " + isValidAnagram);
