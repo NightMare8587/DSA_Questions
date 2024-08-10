@@ -45,8 +45,8 @@ public class ValidAnagram {
 
         // now check every char of str2 with map
         // if map doesn't contain this char then just return false
-        // if map contains then reduce the occurence int of map
-        // if occurence is 0 then remove element from map
+        // if map contains then reduce the occurrence int of map
+        // if occurrence is 0 then remove element from map
         for(int i=0; i<str2.length();i++) {
             Character c = str2.charAt(i);
 
