@@ -10,9 +10,17 @@ public class ThreeSum {
         int[] input = {-1,0,1,2,-1,4};
         int arraySize = input.length;
 
-        List<List<Integer>> groupedThreeSumList = checkAndFindThreeSumIfExistsBruteForce(input,arraySize);
+        List<List<Integer>> groupedThreeSumList = checkAndFindThreeSumIfExistsBetter(input,arraySize);
 
         System.out.println("Printing is grouped three sum exists: " + groupedThreeSumList);
+    }
+
+    static List<List<Integer>> checkAndFindThreeSumIfExistsBetter(int[] input, int arraySize) {
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+        HashSet<ArrayList<Integer>> set = new HashSet<>();
+
+
+        return new ArrayList<>(list);
     }
 
     static List<List<Integer>> checkAndFindThreeSumIfExistsBruteForce(int[] input, int arraySize) {
