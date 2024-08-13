@@ -18,6 +18,7 @@ public class ValidPalindrome {
         System.out.println("Is Input String Palindrome: " + isStringPalindrome);
     }
 
+    //clearing and removing all extra words from string apart from alphanumeric values
     private static String formatInputStringForPalindromeCheck(String input) {
         String str = input;
         str = str.toLowerCase();
@@ -26,13 +27,14 @@ public class ValidPalindrome {
         str = str.replaceAll("[^a-zA-Z0-9]","");
         return str;
     }
-
+    //function checks weather string is palindrome or not
+    //we are using two pointer solution for this one
     static boolean checkIfStringIsValidPalindromeOrNot(String input, int length) {
         int startIndex = 0;
         int endIndex = length-1;
 
         while(startIndex < endIndex) {
-
+            // if any of the two chars are not matching then just return false
             if(input.charAt(startIndex) != input.charAt(endIndex)) {
                 System.out.println("Start value: " + input.charAt(startIndex));
                 System.out.println("End value: " + input.charAt(endIndex));
@@ -43,6 +45,7 @@ public class ValidPalindrome {
             endIndex--;
         }
 
+        //if above return statement didn't executed then we can surely say that string is palindrome
         return true;
     }
 }
